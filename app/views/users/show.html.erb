@@ -1,1 +1,17 @@
-<p>user with email <%= @user.email %></p>
+<h1>User #<%= @user.id %></h1>
+
+<p>
+  <%= link_to "list", users_url %> |
+  <%= link_to "new", new_user_url %> |
+  <%= link_to "edit", edit_user_url(@user) %> |
+  <%= link_to "delete", user_url(@user), method: :delete, confirm: "Are you sure?" %>
+</p>
+
+<dl>
+  <dt>ID</dt>
+  <dd><%= @user.id %></dd>
+  <dt>Email</dt>
+  <dd><%= @user.email %></dd>
+  <dt>Born on</dt>
+  <dd><%= @user.born_on.to_formatted_s(:long) if @user.born_on %></dd>
+</dl>

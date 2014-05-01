@@ -1,0 +1,13 @@
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email, placeholder: "Enter your email address" %>
+  </div>
+  <div>
+    <%= f.label :born_on %>
+    <%= f.date_field :born_on %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

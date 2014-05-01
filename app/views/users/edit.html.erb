@@ -1,5 +1,10 @@
-<%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: "Enter your email address" %>
-  <%= f.submit %>
-<% end %>
+<h1>Edit User #<%= @user.id %></h1>
+
+<p>
+  <%= link_to "list", users_url %> |
+  <%= link_to "new", new_user_url %> |
+  <%= link_to "show", user_url(@user) %> |
+  <%= link_to "delete", user_url(@user), method: :delete, confirm: "Are you sure?" %>
+</p>
+
+<%= render partial: 'form' %>

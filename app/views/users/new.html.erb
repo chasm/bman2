@@ -1,5 +1,7 @@
-<%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: "Enter your email address" %>
-  <%= f.submit %>
-<% end %>
+<h1>Add a new user</h1>
+
+<p>
+  <%= link_to "list", users_url %>
+</p>
+
+<%= render partial: 'form' %>
