@@ -1,0 +1,1 @@
+class Bman.ApplicationController extends Batman.Controller
