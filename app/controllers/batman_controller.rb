@@ -1,7 +1,7 @@
 class BatmanController < ApplicationController
 
   def index
-    render layout: 'batman'
+    render layout: false
   end
 
 end
