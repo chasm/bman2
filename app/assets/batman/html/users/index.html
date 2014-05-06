@@ -1,0 +1,21 @@
+<header>
+  <h1>List of users</h1>
+</header>
+<main>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody data-foreach-user="users">
+      <tr>
+        <td data-bind="user.id"></td>
+        <td data-bind="user.name"></td>
+        <td data-bind="user.email"></td>
+      </tr>
+    </tbody>
+  </table>
+</main>

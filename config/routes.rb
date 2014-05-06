@@ -4,7 +4,14 @@ Bman::Application.routes.draw do
 
   root 'batman#index'
 
-  scope :api, defaults: { format: :json }, except: [ :new, :edit ] do
-    resources :articles
+  scope defaults: { format: :json }, except: [ :new, :edit ] do
+    resources :articles do
+      resources :comments
+    end
+    resources :comments do
+      resources :comments
+    end
+    resources :tags
+    resources :users
   end
 end

@@ -1,0 +1,30 @@
+<div class="col-md-6">
+  <fieldset>
+    <legend>
+      <span data-hideif="user.id">New User</span>
+      <span data-showif="user.id">Edit User</span>
+    </legend>
+    <p id="error-explanation" class="alert-message block-message error" data-showif="user.errors.length">
+      <strong>
+        <span data-bind="user.errors.length"></span>
+        <span data-bind="'error' | pluralize user.errors.length"></span>
+        prevented this user from being created:
+      </strong>
+      <ul>
+        <li data-bind="error.message" data-foreach-error="user.errors"></li>
+      </ul>
+    </p>
+    <div class="form-group">
+      <label for="user-name">Name</label>
+      <input id="user-name" class="form-control" data-bind="user.name" name="user[name]" type="text">
+    </div>
+    <div class="form-group">
+      <label for="user-email">Email</label>
+      <input id="user-email" class="form-control" data-bind="user.email" name="user[email]" type="text">
+    </div>
+  </fieldset>
+  <div class="actions">
+    <input class="btn btn-primary" name="commit" type="submit" value="Submit">
+    <a class="btn" data-route="User">Cancel</a>
+  </div>
+</div>

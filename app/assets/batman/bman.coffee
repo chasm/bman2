@@ -16,19 +16,13 @@
 Batman.config.pathToHTML = '/assets/html'
 
 class Bman extends Batman.App
-  # @resources 'products'
-  # @resources 'discounts', except: ['edit']
-  # @resources 'customers', only: ['new', 'show']
 
-  # @resources 'blogs', ->
-  #   @resources 'articles'
+  @title = "Batblog"
 
-  # @resources 'pages', ->
-  #   @collection 'count'
-  #   @member 'duplicate'
+  @resources 'users'
 
-  # @route 'apps', 'apps#index'
-  # @route 'apps/private', 'apps#private', as: 'privateApps'
+  @resources 'articles', ->
+    @resources 'comments'
 
   @root 'main#index'
 
